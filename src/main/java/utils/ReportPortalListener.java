@@ -7,14 +7,16 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestResult;
 
+import java.io.File;
+
 public class ReportPortalListener extends ReportPortalTestNGListener {
 
     @Override
     public void onTestFailure(ITestResult testResult) {
         if (!testResult.isSuccess()) {
             if (WebDriverRunner.getWebDriver() instanceof TakesScreenshot) {
-                String screenshot = Selenide.screenshot(OutputType.BASE64);
-                LoggingUtils.logBase64(screenshot, "Screenshot of failure");
+                File screenshot = Selenide.screenshot(OutputType.FILE);
+                LoggingUtils.log(screenshot, "Screenshot of failure");
             }
         }
         super.onTestFailure(testResult);

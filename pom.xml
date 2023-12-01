@@ -69,6 +69,27 @@
             <artifactId>logger-java-selenide</artifactId>
             <version>5.1.4</version>
         </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>5.3.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.epam.reportportal</groupId>
+            <artifactId>logger-java-rest-assured</artifactId>
+            <version>5.2.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.22</version>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.20.2</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -88,7 +109,7 @@
                     </argLine>
 
                     <suiteXmlFiles>
-                        <xmlFile>screenTest.xml</xmlFile>
+                        <xmlFile>testng.xml</xmlFile>
                         <!--                        <xmlFile>suites/nested_steps_tests.xml</xmlFile>-->
                     </suiteXmlFiles>
                     <!-- ADD working directory to get TestNG know we to find suite files -->

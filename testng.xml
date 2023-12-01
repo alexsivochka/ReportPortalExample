@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Report examples" parallel="classes" thread-count="10">
+    <test verbose="1" name="ScreenShot">
+        <classes>
+            <class name="test.ScreenshotTest"/>
+        </classes>
+    </test>
+
+<!--    <test verbose="1" name="DataProvider">-->
+<!--        <classes>-->
+<!--            <class name="test.DataProviderTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
+</suite>
